@@ -1,0 +1,24 @@
+fragment Press on Press {
+  title
+  summary
+  author
+  authorBio
+  link
+  product {
+    name
+    slug {
+      current
+    }
+  }
+  image {
+    asset {
+      url
+    }
+  }
+}
+
+query GetPress {
+  allPress {
+    ...Press
+  }
+}

@@ -1,0 +1,24 @@
+fragment HomePageProduct on Product {
+  name
+  slug {
+    current
+  }
+  category {
+    slug {
+      current
+    }
+  }
+  images {
+    colors {
+      asset {
+        url
+      }
+    }
+  }
+}
+
+query GetHomePageData {
+  allProduct {
+    ...HomePageProduct
+  }
+}

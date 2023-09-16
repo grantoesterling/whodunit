@@ -1,0 +1,76 @@
+fragment BlogPost on Post {
+  title
+  slug {
+    current
+  }
+  publishedAt
+  bodyRaw
+  categories {
+    description
+    title
+  }
+  mainImage {
+    asset {
+      url
+      altText
+      label
+    }
+  }
+  author {
+    name
+    bioRaw
+    image {
+      asset {
+        url
+        altText
+        label
+      }
+    }
+  }
+  seoTitle
+  seoDescription
+  preview
+}
+
+fragment BlogPostList on Post {
+  title
+  slug {
+    current
+  }
+  publishedAt
+  preview
+  categories {
+    description
+    title
+  }
+  mainImage {
+    asset {
+      url
+      altText
+      label
+    }
+  }
+  author {
+    name
+    bioRaw
+    image {
+      asset {
+        url
+        altText
+        label
+      }
+    }
+  }
+}
+
+query GetBlogPosts {
+  allPost(sort: [{ title: ASC }, { publishedAt: DESC }]) {
+    ...BlogPostList
+  }
+}
+
+query GetBlogPost($slug: String!) {
+  allPost(where: { slug: { current: { eq: $slug } } }) {
+    ...BlogPost
+  }
+}
