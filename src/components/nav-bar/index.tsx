@@ -106,7 +106,7 @@ export const NavBar = ({
           categories={categories}
         />
       ) : null}
-      <Section tw="bg-offWhite py-[12px] z-30 absolute top-0 h-[64px] w-full">
+      <Section tw="bg-offWhite py-[12px] z-30 fixed top-0 h-[64px] w-full">
         <div tw="flex justify-between items-center z-50">
           <Button buttonType={ButtonType.unstyled} size="sm" to={'/'}>
             <div tw="relative h-[28px] w-[173px]">
