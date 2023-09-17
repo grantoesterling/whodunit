@@ -251,6 +251,7 @@ export const getStaticProps: GetStaticProps<BlogPageProps> = async (
     props: {
       blogPost,
     },
+    revalidate: 60,
   }
 }
 
