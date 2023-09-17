@@ -1,6 +1,7 @@
 export const AppConfig = {
-  site_name: 'Fresh Pickle',
-  title: 'Fresh Pickle - Stylish Pickleball Bags and Gear',
-  description: 'Your destination for stylish pickleball bags, gear, and more!',
+  site_name: 'Whodunit World',
+  title: 'Whodunit World - All things murder mystery',
+  description:
+    'Your destination for anything and everything related to murder mysteries!',
   locale: 'en',
 }

@@ -1,9 +1,6 @@
 import Section from '@components/section'
 import { GetStaticProps } from 'next'
-import {
-  BlogPostListFragment,
-  GetBlogPostsDocument,
-} from 'src/generated/graphql'
+
 import { Meta } from 'src/layout/Meta'
 import Image from 'next/image'
 import { createClient } from 'urql'
@@ -14,6 +11,7 @@ import { formatDate } from '../utils/utils'
 import Link from 'next/link'
 import { SmallHero } from '@components/small-hero'
 import { GRAPHQL_ENDPOINT } from 'src/utils/constants'
+import { BlogPostListFragment, GetBlogPostsDocument } from 'src/generated/graphql'
 
 type BlogPageProps = {
   blogPosts: BlogPostListFragment[]

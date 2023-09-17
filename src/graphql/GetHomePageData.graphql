@@ -1,0 +1,5 @@
+query GetHomePageData {
+  allPost(sort: [{ publishedAt: DESC }], limit: 10) {
+    ...BlogPostList
+  }
+}

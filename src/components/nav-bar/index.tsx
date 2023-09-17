@@ -4,8 +4,8 @@ import { Button, ButtonType } from '@components/button'
 import { HamburgerButton, HamburgerMenu } from '@components/hamburger-menu'
 import React from 'react'
 import Image from 'next/image'
-import { ProductNavFragment } from 'src/generated/graphql'
 import { CaretIcon } from '@components/icons'
+import { CategoryItemFragment } from '../../generated/graphql';
 
 const ExpandingMenuItem = ({
   title,
@@ -49,22 +49,22 @@ const ExpandingMenuItem = ({
 }
 
 const DesktopNav = ({
-  products,
+  categories,
 }: {
-  products?: ProductNavFragment[]
+  categories?: CategoryItemFragment[]
 }): React.ReactElement => {
   return (
     <div tw="items-center gap-x-xs hidden lg:flex">
       <ExpandingMenuItem title="OUR PRODUCTS">
         <div tw="flex flex-col">
-          {products?.map((product) => (
+          {categories?.map((category) => (
             <Button
-              key={product.slug?.current}
+              key={category.title}
               buttonType={ButtonType.nav}
-              to={`/product-category/${product.category?.slug?.current}/${product.slug?.current}`}
+              to={`/product-category`}
               tw="hover:text-darkerGreen"
             >
-              {product.name}
+              {category.title}
             </Button>
           ))}
         </div>
@@ -82,30 +82,14 @@ const DesktopNav = ({
           </Button>
         </div>
       </ExpandingMenuItem>
-      <ExpandingMenuItem title="CONTACT">
-        <div tw="flex flex-col items-center">
-          <Button buttonType={ButtonType.nav} to={'/customerservice'}>
-            Customer Service
-          </Button>
-          <Button buttonType={ButtonType.nav} to={'/wholesale'}>
-            Wholesale
-          </Button>
-          <Button buttonType={ButtonType.nav} to={'/register'}>
-            Register
-          </Button>
-        </div>
-      </ExpandingMenuItem>
-      <Button buttonType={ButtonType.solid} tw="ml-xs" size="sm">
-        SHOP NOW
-      </Button>
     </div>
   )
 }
 
 export const NavBar = ({
-  products,
+  categories,
 }: {
-  products?: ProductNavFragment[]
+  categories?: CategoryItemFragment[]
 }): React.ReactElement => {
   const [hamburgerMenuVisible, setHamburgerMenuVisible] =
     React.useState<boolean>(false)
@@ -119,7 +103,7 @@ export const NavBar = ({
       {hamburgerMenuVisible ? (
         <HamburgerMenu
           onHamburgerClick={onHamburgerClick}
-          products={products}
+          products={categories}
         />
       ) : null}
       <Section tw="bg-offWhite py-[12px] z-30 absolute top-0 h-[64px] w-full">
@@ -138,7 +122,7 @@ export const NavBar = ({
             </div>
           </Button>
 
-          <DesktopNav products={products} />
+          <DesktopNav categories={categories} />
           <HamburgerButton onHamburgerClick={onHamburgerClick} />
         </div>
       </Section>

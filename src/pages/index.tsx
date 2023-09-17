@@ -1,32 +1,24 @@
-import { GetStaticProps } from 'next'
-import {
-  GetHomePageDataDocument,
-  HomePageProductFragment,
-} from 'src/generated/graphql'
 import { Meta } from 'src/layout/Meta'
-
-import { createClient } from 'urql'
 import 'twin.macro'
-
 import { AppConfig } from 'src/utils/AppConfig'
-
 import { Hero } from 'src/templates/Hero'
+import { GetStaticProps } from 'next'
+import { BlogPostListFragment, GetHomePageDataDocument } from 'src/generated/graphql'
 import { GRAPHQL_ENDPOINT } from 'src/utils/constants'
+import { createClient } from 'urql'
 
 type HomePageProps = {
-  products: HomePageProductFragment[]
+  blogPosts: BlogPostListFragment[]
 }
 
-export default function HomePage(props: HomePageProps): React.ReactElement {
-  const _products = props.products //.concat(props.blogPosts)
+export default function HomePage({blogPosts}:HomePageProps): React.ReactElement {
   return (
-    <div className="text-gray-600 antialiased">
+    <>
       <Meta title={AppConfig.title} description={AppConfig.description} />
-      <div tw="mt-[64px]">
-        <Hero />
-
+      <div tw="mt-[64px] bg-purple-600">
+        <Hero post={blogPosts[0]} />
       </div>
-    </div>
+    </>
   )
 }
 
@@ -37,10 +29,10 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   })
   const { data } = await client.query(GetHomePageDataDocument, {}).toPromise()
 
-  const products = data?.allProduct ?? []
+  const blogPosts = data?.allPost ?? []
   return {
     props: {
-      products,
+      blogPosts,
     },
   }
 }

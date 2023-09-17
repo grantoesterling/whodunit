@@ -390,273 +390,18 @@ export type PostSorting = {
   title?: InputMaybe<SortOrder>;
 };
 
-export type Press = Document & {
-  __typename?: 'Press';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']>;
-  _key?: Maybe<Scalars['String']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']>;
-  author?: Maybe<Scalars['String']>;
-  authorBio?: Maybe<Scalars['String']>;
-  image?: Maybe<Image>;
-  link?: Maybe<Scalars['String']>;
-  product?: Maybe<Product>;
-  summary?: Maybe<Scalars['String']>;
-  title?: Maybe<Scalars['String']>;
-};
-
-export type PressFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  author?: InputMaybe<StringFilter>;
-  authorBio?: InputMaybe<StringFilter>;
-  image?: InputMaybe<ImageFilter>;
-  link?: InputMaybe<StringFilter>;
-  product?: InputMaybe<ProductFilter>;
-  summary?: InputMaybe<StringFilter>;
-  title?: InputMaybe<StringFilter>;
-};
-
-export type PressSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  author?: InputMaybe<SortOrder>;
-  authorBio?: InputMaybe<SortOrder>;
-  image?: InputMaybe<ImageSorting>;
-  link?: InputMaybe<SortOrder>;
-  summary?: InputMaybe<SortOrder>;
-  title?: InputMaybe<SortOrder>;
-};
-
-export type Product = Document & {
-  __typename?: 'Product';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']>;
-  _key?: Maybe<Scalars['String']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']>;
-  amazonLink?: Maybe<Scalars['String']>;
-  category?: Maybe<ProductCategory>;
-  description?: Maybe<Scalars['String']>;
-  dimensionsBullets?: Maybe<Array<Maybe<Scalars['String']>>>;
-  images?: Maybe<Array<Maybe<ProductColor>>>;
-  materialBullets?: Maybe<Array<Maybe<Scalars['String']>>>;
-  name?: Maybe<Scalars['String']>;
-  price?: Maybe<Scalars['Float']>;
-  productDetailBullets?: Maybe<Array<Maybe<Scalars['String']>>>;
-  slug?: Maybe<Slug>;
-};
-
-export type ProductCategory = Document & {
-  __typename?: 'ProductCategory';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']>;
-  _key?: Maybe<Scalars['String']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']>;
-  name?: Maybe<Scalars['String']>;
-  slug?: Maybe<Slug>;
-};
-
-export type ProductCategoryFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  name?: InputMaybe<StringFilter>;
-  slug?: InputMaybe<SlugFilter>;
-};
-
-export type ProductCategorySorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  name?: InputMaybe<SortOrder>;
-  slug?: InputMaybe<SlugSorting>;
-};
-
-export type ProductColor = Document & {
-  __typename?: 'ProductColor';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']>;
-  _key?: Maybe<Scalars['String']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']>;
-  colors?: Maybe<Array<Maybe<Image>>>;
-  icon?: Maybe<Image>;
-  name?: Maybe<Scalars['String']>;
-  product?: Maybe<Product>;
-};
-
-export type ProductColorFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  icon?: InputMaybe<ImageFilter>;
-  name?: InputMaybe<StringFilter>;
-  product?: InputMaybe<ProductFilter>;
-};
-
-export type ProductColorSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  icon?: InputMaybe<ImageSorting>;
-  name?: InputMaybe<SortOrder>;
-};
-
-export type ProductFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  amazonLink?: InputMaybe<StringFilter>;
-  category?: InputMaybe<ProductCategoryFilter>;
-  description?: InputMaybe<StringFilter>;
-  name?: InputMaybe<StringFilter>;
-  price?: InputMaybe<FloatFilter>;
-  slug?: InputMaybe<SlugFilter>;
-};
-
-export type ProductSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  amazonLink?: InputMaybe<SortOrder>;
-  description?: InputMaybe<SortOrder>;
-  name?: InputMaybe<SortOrder>;
-  price?: InputMaybe<SortOrder>;
-  slug?: InputMaybe<SlugSorting>;
-};
-
-export type Review = Document & {
-  __typename?: 'Review';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']>;
-  _key?: Maybe<Scalars['String']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']>;
-  author?: Maybe<Scalars['String']>;
-  product?: Maybe<Product>;
-  review?: Maybe<Scalars['String']>;
-  source?: Maybe<Scalars['String']>;
-  title?: Maybe<Scalars['String']>;
-};
-
-export type ReviewFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  author?: InputMaybe<StringFilter>;
-  product?: InputMaybe<ProductFilter>;
-  review?: InputMaybe<StringFilter>;
-  source?: InputMaybe<StringFilter>;
-  title?: InputMaybe<StringFilter>;
-};
-
-export type ReviewSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  author?: InputMaybe<SortOrder>;
-  review?: InputMaybe<SortOrder>;
-  source?: InputMaybe<SortOrder>;
-  title?: InputMaybe<SortOrder>;
-};
-
 export type RootQuery = {
   __typename?: 'RootQuery';
   Author?: Maybe<Author>;
   Category?: Maybe<Category>;
   Document?: Maybe<Document>;
   Post?: Maybe<Post>;
-  Press?: Maybe<Press>;
-  Product?: Maybe<Product>;
-  ProductCategory?: Maybe<ProductCategory>;
-  ProductColor?: Maybe<ProductColor>;
-  Review?: Maybe<Review>;
   SanityFileAsset?: Maybe<SanityFileAsset>;
   SanityImageAsset?: Maybe<SanityImageAsset>;
   allAuthor: Array<Author>;
   allCategory: Array<Category>;
   allDocument: Array<Document>;
   allPost: Array<Post>;
-  allPress: Array<Press>;
-  allProduct: Array<Product>;
-  allProductCategory: Array<ProductCategory>;
-  allProductColor: Array<ProductColor>;
-  allReview: Array<Review>;
   allSanityFileAsset: Array<SanityFileAsset>;
   allSanityImageAsset: Array<SanityImageAsset>;
 };
@@ -678,31 +423,6 @@ export type RootQueryDocumentArgs = {
 
 
 export type RootQueryPostArgs = {
-  id: Scalars['ID'];
-};
-
-
-export type RootQueryPressArgs = {
-  id: Scalars['ID'];
-};
-
-
-export type RootQueryProductArgs = {
-  id: Scalars['ID'];
-};
-
-
-export type RootQueryProductCategoryArgs = {
-  id: Scalars['ID'];
-};
-
-
-export type RootQueryProductColorArgs = {
-  id: Scalars['ID'];
-};
-
-
-export type RootQueryReviewArgs = {
   id: Scalars['ID'];
 };
 
@@ -746,46 +466,6 @@ export type RootQueryAllPostArgs = {
   offset?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<PostSorting>>;
   where?: InputMaybe<PostFilter>;
-};
-
-
-export type RootQueryAllPressArgs = {
-  limit?: InputMaybe<Scalars['Int']>;
-  offset?: InputMaybe<Scalars['Int']>;
-  sort?: InputMaybe<Array<PressSorting>>;
-  where?: InputMaybe<PressFilter>;
-};
-
-
-export type RootQueryAllProductArgs = {
-  limit?: InputMaybe<Scalars['Int']>;
-  offset?: InputMaybe<Scalars['Int']>;
-  sort?: InputMaybe<Array<ProductSorting>>;
-  where?: InputMaybe<ProductFilter>;
-};
-
-
-export type RootQueryAllProductCategoryArgs = {
-  limit?: InputMaybe<Scalars['Int']>;
-  offset?: InputMaybe<Scalars['Int']>;
-  sort?: InputMaybe<Array<ProductCategorySorting>>;
-  where?: InputMaybe<ProductCategoryFilter>;
-};
-
-
-export type RootQueryAllProductColorArgs = {
-  limit?: InputMaybe<Scalars['Int']>;
-  offset?: InputMaybe<Scalars['Int']>;
-  sort?: InputMaybe<Array<ProductColorSorting>>;
-  where?: InputMaybe<ProductColorFilter>;
-};
-
-
-export type RootQueryAllReviewArgs = {
-  limit?: InputMaybe<Scalars['Int']>;
-  offset?: InputMaybe<Scalars['Int']>;
-  sort?: InputMaybe<Array<ReviewSorting>>;
-  where?: InputMaybe<ReviewFilter>;
 };
 
 
@@ -1242,39 +922,17 @@ export type GetBlogPostQueryVariables = Exact<{
 
 export type GetBlogPostQuery = { __typename?: 'RootQuery', allPost: Array<{ __typename?: 'Post', title?: string | null, publishedAt?: any | null, bodyRaw?: any | null, seoTitle?: string | null, seoDescription?: string | null, preview?: string | null, slug?: { __typename?: 'Slug', current?: string | null } | null, categories?: Array<{ __typename?: 'Category', description?: string | null, title?: string | null } | null> | null, mainImage?: { __typename?: 'Image', asset?: { __typename?: 'SanityImageAsset', url?: string | null, altText?: string | null, label?: string | null } | null } | null, author?: { __typename?: 'Author', name?: string | null, bioRaw?: any | null, image?: { __typename?: 'Image', asset?: { __typename?: 'SanityImageAsset', url?: string | null, altText?: string | null, label?: string | null } | null } | null } | null }> };
 
-export type HomePageProductFragment = { __typename?: 'Product', name?: string | null, slug?: { __typename?: 'Slug', current?: string | null } | null, category?: { __typename?: 'ProductCategory', slug?: { __typename?: 'Slug', current?: string | null } | null } | null, images?: Array<{ __typename?: 'ProductColor', colors?: Array<{ __typename?: 'Image', asset?: { __typename?: 'SanityImageAsset', url?: string | null } | null } | null> | null } | null> | null };
-
 export type GetHomePageDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetHomePageDataQuery = { __typename?: 'RootQuery', allProduct: Array<{ __typename?: 'Product', name?: string | null, slug?: { __typename?: 'Slug', current?: string | null } | null, category?: { __typename?: 'ProductCategory', slug?: { __typename?: 'Slug', current?: string | null } | null } | null, images?: Array<{ __typename?: 'ProductColor', colors?: Array<{ __typename?: 'Image', asset?: { __typename?: 'SanityImageAsset', url?: string | null } | null } | null> | null } | null> | null }> };
+export type GetHomePageDataQuery = { __typename?: 'RootQuery', allPost: Array<{ __typename?: 'Post', title?: string | null, publishedAt?: any | null, preview?: string | null, slug?: { __typename?: 'Slug', current?: string | null } | null, categories?: Array<{ __typename?: 'Category', description?: string | null, title?: string | null } | null> | null, mainImage?: { __typename?: 'Image', asset?: { __typename?: 'SanityImageAsset', url?: string | null, altText?: string | null, label?: string | null } | null } | null, author?: { __typename?: 'Author', name?: string | null, bioRaw?: any | null, image?: { __typename?: 'Image', asset?: { __typename?: 'SanityImageAsset', url?: string | null, altText?: string | null, label?: string | null } | null } | null } | null }> };
 
-export type ProductNavFragment = { __typename?: 'Product', name?: string | null, slug?: { __typename?: 'Slug', current?: string | null } | null, category?: { __typename?: 'ProductCategory', slug?: { __typename?: 'Slug', current?: string | null } | null } | null };
+export type CategoryItemFragment = { __typename?: 'Category', title?: string | null, description?: string | null };
 
 export type GetNavDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetNavDataQuery = { __typename?: 'RootQuery', allProduct: Array<{ __typename?: 'Product', name?: string | null, slug?: { __typename?: 'Slug', current?: string | null } | null, category?: { __typename?: 'ProductCategory', slug?: { __typename?: 'Slug', current?: string | null } | null } | null }> };
-
-export type PressFragment = { __typename?: 'Press', title?: string | null, summary?: string | null, author?: string | null, authorBio?: string | null, link?: string | null, product?: { __typename?: 'Product', name?: string | null, slug?: { __typename?: 'Slug', current?: string | null } | null } | null, image?: { __typename?: 'Image', asset?: { __typename?: 'SanityImageAsset', url?: string | null } | null } | null };
-
-export type GetPressQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type GetPressQuery = { __typename?: 'RootQuery', allPress: Array<{ __typename?: 'Press', title?: string | null, summary?: string | null, author?: string | null, authorBio?: string | null, link?: string | null, product?: { __typename?: 'Product', name?: string | null, slug?: { __typename?: 'Slug', current?: string | null } | null } | null, image?: { __typename?: 'Image', asset?: { __typename?: 'SanityImageAsset', url?: string | null } | null } | null }> };
-
-export type ColorFragment = { __typename?: 'ProductColor', name?: string | null, icon?: { __typename?: 'Image', asset?: { __typename?: 'SanityImageAsset', url?: string | null } | null } | null, colors?: Array<{ __typename?: 'Image', asset?: { __typename?: 'SanityImageAsset', url?: string | null } | null } | null> | null };
-
-export type ProductFragment = { __typename?: 'Product', name?: string | null, description?: string | null, productDetailBullets?: Array<string | null> | null, materialBullets?: Array<string | null> | null, dimensionsBullets?: Array<string | null> | null, amazonLink?: string | null, price?: number | null, slug?: { __typename?: 'Slug', current?: string | null } | null, category?: { __typename?: 'ProductCategory', slug?: { __typename?: 'Slug', current?: string | null } | null } | null, images?: Array<{ __typename?: 'ProductColor', name?: string | null, icon?: { __typename?: 'Image', asset?: { __typename?: 'SanityImageAsset', url?: string | null } | null } | null, colors?: Array<{ __typename?: 'Image', asset?: { __typename?: 'SanityImageAsset', url?: string | null } | null } | null> | null } | null> | null };
-
-export type ReviewFragment = { __typename?: 'Review', title?: string | null, review?: string | null, author?: string | null, source?: string | null };
-
-export type GetProductQueryVariables = Exact<{
-  slug: Scalars['String'];
-}>;
-
-
-export type GetProductQuery = { __typename?: 'RootQuery', allProduct: Array<{ __typename?: 'Product', name?: string | null, description?: string | null, productDetailBullets?: Array<string | null> | null, materialBullets?: Array<string | null> | null, dimensionsBullets?: Array<string | null> | null, amazonLink?: string | null, price?: number | null, slug?: { __typename?: 'Slug', current?: string | null } | null, category?: { __typename?: 'ProductCategory', slug?: { __typename?: 'Slug', current?: string | null } | null } | null, images?: Array<{ __typename?: 'ProductColor', name?: string | null, icon?: { __typename?: 'Image', asset?: { __typename?: 'SanityImageAsset', url?: string | null } | null } | null, colors?: Array<{ __typename?: 'Image', asset?: { __typename?: 'SanityImageAsset', url?: string | null } | null } | null> | null } | null> | null }>, allReview: Array<{ __typename?: 'Review', title?: string | null, review?: string | null, author?: string | null, source?: string | null }> };
+export type GetNavDataQuery = { __typename?: 'RootQuery', allCategory: Array<{ __typename?: 'Category', title?: string | null, description?: string | null }> };
 
 
 
@@ -1362,7 +1020,7 @@ export type ResolversTypes = {
   DateFilter: DateFilter;
   DateTime: ResolverTypeWrapper<Scalars['DateTime']>;
   DatetimeFilter: DatetimeFilter;
-  Document: ResolversTypes['Author'] | ResolversTypes['Category'] | ResolversTypes['Post'] | ResolversTypes['Press'] | ResolversTypes['Product'] | ResolversTypes['ProductCategory'] | ResolversTypes['ProductColor'] | ResolversTypes['Review'] | ResolversTypes['SanityFileAsset'] | ResolversTypes['SanityImageAsset'];
+  Document: ResolversTypes['Author'] | ResolversTypes['Category'] | ResolversTypes['Post'] | ResolversTypes['SanityFileAsset'] | ResolversTypes['SanityImageAsset'];
   DocumentFilter: DocumentFilter;
   DocumentSorting: DocumentSorting;
   File: ResolverTypeWrapper<File>;
@@ -1384,21 +1042,6 @@ export type ResolversTypes = {
   Post: ResolverTypeWrapper<Post>;
   PostFilter: PostFilter;
   PostSorting: PostSorting;
-  Press: ResolverTypeWrapper<Press>;
-  PressFilter: PressFilter;
-  PressSorting: PressSorting;
-  Product: ResolverTypeWrapper<Product>;
-  ProductCategory: ResolverTypeWrapper<ProductCategory>;
-  ProductCategoryFilter: ProductCategoryFilter;
-  ProductCategorySorting: ProductCategorySorting;
-  ProductColor: ResolverTypeWrapper<ProductColor>;
-  ProductColorFilter: ProductColorFilter;
-  ProductColorSorting: ProductColorSorting;
-  ProductFilter: ProductFilter;
-  ProductSorting: ProductSorting;
-  Review: ResolverTypeWrapper<Review>;
-  ReviewFilter: ReviewFilter;
-  ReviewSorting: ReviewSorting;
   RootQuery: ResolverTypeWrapper<{}>;
   SanityAssetSourceData: ResolverTypeWrapper<SanityAssetSourceData>;
   SanityAssetSourceDataFilter: SanityAssetSourceDataFilter;
@@ -1456,7 +1099,7 @@ export type ResolversParentTypes = {
   DateFilter: DateFilter;
   DateTime: Scalars['DateTime'];
   DatetimeFilter: DatetimeFilter;
-  Document: ResolversParentTypes['Author'] | ResolversParentTypes['Category'] | ResolversParentTypes['Post'] | ResolversParentTypes['Press'] | ResolversParentTypes['Product'] | ResolversParentTypes['ProductCategory'] | ResolversParentTypes['ProductColor'] | ResolversParentTypes['Review'] | ResolversParentTypes['SanityFileAsset'] | ResolversParentTypes['SanityImageAsset'];
+  Document: ResolversParentTypes['Author'] | ResolversParentTypes['Category'] | ResolversParentTypes['Post'] | ResolversParentTypes['SanityFileAsset'] | ResolversParentTypes['SanityImageAsset'];
   DocumentFilter: DocumentFilter;
   DocumentSorting: DocumentSorting;
   File: File;
@@ -1478,21 +1121,6 @@ export type ResolversParentTypes = {
   Post: Post;
   PostFilter: PostFilter;
   PostSorting: PostSorting;
-  Press: Press;
-  PressFilter: PressFilter;
-  PressSorting: PressSorting;
-  Product: Product;
-  ProductCategory: ProductCategory;
-  ProductCategoryFilter: ProductCategoryFilter;
-  ProductCategorySorting: ProductCategorySorting;
-  ProductColor: ProductColor;
-  ProductColorFilter: ProductColorFilter;
-  ProductColorSorting: ProductColorSorting;
-  ProductFilter: ProductFilter;
-  ProductSorting: ProductSorting;
-  Review: Review;
-  ReviewFilter: ReviewFilter;
-  ReviewSorting: ReviewSorting;
   RootQuery: {};
   SanityAssetSourceData: SanityAssetSourceData;
   SanityAssetSourceDataFilter: SanityAssetSourceDataFilter;
@@ -1598,7 +1226,7 @@ export interface DateTimeScalarConfig extends GraphQLScalarTypeConfig<ResolversT
 }
 
 export type DocumentResolvers<ContextType = any, ParentType extends ResolversParentTypes['Document'] = ResolversParentTypes['Document']> = {
-  __resolveType: TypeResolveFn<'Author' | 'Category' | 'Post' | 'Press' | 'Product' | 'ProductCategory' | 'ProductColor' | 'Review' | 'SanityFileAsset' | 'SanityImageAsset', ParentType, ContextType>;
+  __resolveType: TypeResolveFn<'Author' | 'Category' | 'Post' | 'SanityFileAsset' | 'SanityImageAsset', ParentType, ContextType>;
   _createdAt?: Resolver<Maybe<ResolversTypes['DateTime']>, ParentType, ContextType>;
   _id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
   _rev?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1655,105 +1283,17 @@ export type PostResolvers<ContextType = any, ParentType extends ResolversParentT
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type PressResolvers<ContextType = any, ParentType extends ResolversParentTypes['Press'] = ResolversParentTypes['Press']> = {
-  _createdAt?: Resolver<Maybe<ResolversTypes['DateTime']>, ParentType, ContextType>;
-  _id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
-  _key?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _rev?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _type?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _updatedAt?: Resolver<Maybe<ResolversTypes['DateTime']>, ParentType, ContextType>;
-  author?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  authorBio?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  image?: Resolver<Maybe<ResolversTypes['Image']>, ParentType, ContextType>;
-  link?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  product?: Resolver<Maybe<ResolversTypes['Product']>, ParentType, ContextType>;
-  summary?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-};
-
-export type ProductResolvers<ContextType = any, ParentType extends ResolversParentTypes['Product'] = ResolversParentTypes['Product']> = {
-  _createdAt?: Resolver<Maybe<ResolversTypes['DateTime']>, ParentType, ContextType>;
-  _id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
-  _key?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _rev?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _type?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _updatedAt?: Resolver<Maybe<ResolversTypes['DateTime']>, ParentType, ContextType>;
-  amazonLink?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  category?: Resolver<Maybe<ResolversTypes['ProductCategory']>, ParentType, ContextType>;
-  description?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  dimensionsBullets?: Resolver<Maybe<Array<Maybe<ResolversTypes['String']>>>, ParentType, ContextType>;
-  images?: Resolver<Maybe<Array<Maybe<ResolversTypes['ProductColor']>>>, ParentType, ContextType>;
-  materialBullets?: Resolver<Maybe<Array<Maybe<ResolversTypes['String']>>>, ParentType, ContextType>;
-  name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  price?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
-  productDetailBullets?: Resolver<Maybe<Array<Maybe<ResolversTypes['String']>>>, ParentType, ContextType>;
-  slug?: Resolver<Maybe<ResolversTypes['Slug']>, ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-};
-
-export type ProductCategoryResolvers<ContextType = any, ParentType extends ResolversParentTypes['ProductCategory'] = ResolversParentTypes['ProductCategory']> = {
-  _createdAt?: Resolver<Maybe<ResolversTypes['DateTime']>, ParentType, ContextType>;
-  _id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
-  _key?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _rev?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _type?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _updatedAt?: Resolver<Maybe<ResolversTypes['DateTime']>, ParentType, ContextType>;
-  name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  slug?: Resolver<Maybe<ResolversTypes['Slug']>, ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-};
-
-export type ProductColorResolvers<ContextType = any, ParentType extends ResolversParentTypes['ProductColor'] = ResolversParentTypes['ProductColor']> = {
-  _createdAt?: Resolver<Maybe<ResolversTypes['DateTime']>, ParentType, ContextType>;
-  _id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
-  _key?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _rev?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _type?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _updatedAt?: Resolver<Maybe<ResolversTypes['DateTime']>, ParentType, ContextType>;
-  colors?: Resolver<Maybe<Array<Maybe<ResolversTypes['Image']>>>, ParentType, ContextType>;
-  icon?: Resolver<Maybe<ResolversTypes['Image']>, ParentType, ContextType>;
-  name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  product?: Resolver<Maybe<ResolversTypes['Product']>, ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-};
-
-export type ReviewResolvers<ContextType = any, ParentType extends ResolversParentTypes['Review'] = ResolversParentTypes['Review']> = {
-  _createdAt?: Resolver<Maybe<ResolversTypes['DateTime']>, ParentType, ContextType>;
-  _id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
-  _key?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _rev?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _type?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  _updatedAt?: Resolver<Maybe<ResolversTypes['DateTime']>, ParentType, ContextType>;
-  author?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  product?: Resolver<Maybe<ResolversTypes['Product']>, ParentType, ContextType>;
-  review?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  source?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-};
-
 export type RootQueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['RootQuery'] = ResolversParentTypes['RootQuery']> = {
   Author?: Resolver<Maybe<ResolversTypes['Author']>, ParentType, ContextType, RequireFields<RootQueryAuthorArgs, 'id'>>;
   Category?: Resolver<Maybe<ResolversTypes['Category']>, ParentType, ContextType, RequireFields<RootQueryCategoryArgs, 'id'>>;
   Document?: Resolver<Maybe<ResolversTypes['Document']>, ParentType, ContextType, RequireFields<RootQueryDocumentArgs, 'id'>>;
   Post?: Resolver<Maybe<ResolversTypes['Post']>, ParentType, ContextType, RequireFields<RootQueryPostArgs, 'id'>>;
-  Press?: Resolver<Maybe<ResolversTypes['Press']>, ParentType, ContextType, RequireFields<RootQueryPressArgs, 'id'>>;
-  Product?: Resolver<Maybe<ResolversTypes['Product']>, ParentType, ContextType, RequireFields<RootQueryProductArgs, 'id'>>;
-  ProductCategory?: Resolver<Maybe<ResolversTypes['ProductCategory']>, ParentType, ContextType, RequireFields<RootQueryProductCategoryArgs, 'id'>>;
-  ProductColor?: Resolver<Maybe<ResolversTypes['ProductColor']>, ParentType, ContextType, RequireFields<RootQueryProductColorArgs, 'id'>>;
-  Review?: Resolver<Maybe<ResolversTypes['Review']>, ParentType, ContextType, RequireFields<RootQueryReviewArgs, 'id'>>;
   SanityFileAsset?: Resolver<Maybe<ResolversTypes['SanityFileAsset']>, ParentType, ContextType, RequireFields<RootQuerySanityFileAssetArgs, 'id'>>;
   SanityImageAsset?: Resolver<Maybe<ResolversTypes['SanityImageAsset']>, ParentType, ContextType, RequireFields<RootQuerySanityImageAssetArgs, 'id'>>;
   allAuthor?: Resolver<Array<ResolversTypes['Author']>, ParentType, ContextType, Partial<RootQueryAllAuthorArgs>>;
   allCategory?: Resolver<Array<ResolversTypes['Category']>, ParentType, ContextType, Partial<RootQueryAllCategoryArgs>>;
   allDocument?: Resolver<Array<ResolversTypes['Document']>, ParentType, ContextType, Partial<RootQueryAllDocumentArgs>>;
   allPost?: Resolver<Array<ResolversTypes['Post']>, ParentType, ContextType, Partial<RootQueryAllPostArgs>>;
-  allPress?: Resolver<Array<ResolversTypes['Press']>, ParentType, ContextType, Partial<RootQueryAllPressArgs>>;
-  allProduct?: Resolver<Array<ResolversTypes['Product']>, ParentType, ContextType, Partial<RootQueryAllProductArgs>>;
-  allProductCategory?: Resolver<Array<ResolversTypes['ProductCategory']>, ParentType, ContextType, Partial<RootQueryAllProductCategoryArgs>>;
-  allProductColor?: Resolver<Array<ResolversTypes['ProductColor']>, ParentType, ContextType, Partial<RootQueryAllProductColorArgs>>;
-  allReview?: Resolver<Array<ResolversTypes['Review']>, ParentType, ContextType, Partial<RootQueryAllReviewArgs>>;
   allSanityFileAsset?: Resolver<Array<ResolversTypes['SanityFileAsset']>, ParentType, ContextType, Partial<RootQueryAllSanityFileAssetArgs>>;
   allSanityImageAsset?: Resolver<Array<ResolversTypes['SanityImageAsset']>, ParentType, ContextType, Partial<RootQueryAllSanityImageAssetArgs>>;
 };
@@ -1910,11 +1450,6 @@ export type Resolvers<ContextType = any> = {
   Image?: ImageResolvers<ContextType>;
   JSON?: GraphQLScalarType;
   Post?: PostResolvers<ContextType>;
-  Press?: PressResolvers<ContextType>;
-  Product?: ProductResolvers<ContextType>;
-  ProductCategory?: ProductCategoryResolvers<ContextType>;
-  ProductColor?: ProductColorResolvers<ContextType>;
-  Review?: ReviewResolvers<ContextType>;
   RootQuery?: RootQueryResolvers<ContextType>;
   SanityAssetSourceData?: SanityAssetSourceDataResolvers<ContextType>;
   SanityFileAsset?: SanityFileAssetResolvers<ContextType>;
@@ -1936,15 +1471,8 @@ export type DirectiveResolvers<ContextType = any> = {
 
 export const BlogPostFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlogPost"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Post"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"current"}}]}},{"kind":"Field","name":{"kind":"Name","value":"publishedAt"}},{"kind":"Field","name":{"kind":"Name","value":"bodyRaw"}},{"kind":"Field","name":{"kind":"Name","value":"categories"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"mainImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"asset"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"label"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"author"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"bioRaw"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"asset"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"label"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"seoTitle"}},{"kind":"Field","name":{"kind":"Name","value":"seoDescription"}},{"kind":"Field","name":{"kind":"Name","value":"preview"}}]}}]} as unknown as DocumentNode<BlogPostFragment, unknown>;
 export const BlogPostListFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlogPostList"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Post"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"current"}}]}},{"kind":"Field","name":{"kind":"Name","value":"publishedAt"}},{"kind":"Field","name":{"kind":"Name","value":"preview"}},{"kind":"Field","name":{"kind":"Name","value":"categories"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"mainImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"asset"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"label"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"author"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"bioRaw"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"asset"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"label"}}]}}]}}]}}]}}]} as unknown as DocumentNode<BlogPostListFragment, unknown>;
-export const HomePageProductFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HomePageProduct"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Product"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"slug"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"current"}}]}},{"kind":"Field","name":{"kind":"Name","value":"category"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"current"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"images"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"colors"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"asset"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]}}]} as unknown as DocumentNode<HomePageProductFragment, unknown>;
-export const ProductNavFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProductNav"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Product"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"slug"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"current"}}]}},{"kind":"Field","name":{"kind":"Name","value":"category"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"current"}}]}}]}}]}}]} as unknown as DocumentNode<ProductNavFragment, unknown>;
-export const PressFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Press"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Press"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"summary"}},{"kind":"Field","name":{"kind":"Name","value":"author"}},{"kind":"Field","name":{"kind":"Name","value":"authorBio"}},{"kind":"Field","name":{"kind":"Name","value":"link"}},{"kind":"Field","name":{"kind":"Name","value":"product"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"slug"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"current"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"asset"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]} as unknown as DocumentNode<PressFragment, unknown>;
-export const ColorFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Color"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProductColor"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"asset"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"colors"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"asset"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]} as unknown as DocumentNode<ColorFragment, unknown>;
-export const ProductFragmentDoc = {"kind":"Document", "definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Product"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Product"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"slug"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"current"}}]}},{"kind":"Field","name":{"kind":"Name","value":"category"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"current"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"productDetailBullets"}},{"kind":"Field","name":{"kind":"Name","value":"materialBullets"}},{"kind":"Field","name":{"kind":"Name","value":"dimensionsBullets"}},{"kind":"Field","name":{"kind":"Name","value":"amazonLink"}},{"kind":"Field","name":{"kind":"Name","value":"price"}},{"kind":"Field","name":{"kind":"Name","value":"images"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Color"}}]}}]}},...ColorFragmentDoc.definitions]} as unknown as DocumentNode<ProductFragment, unknown>;
-export const ReviewFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Review"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Review"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"review"}},{"kind":"Field","name":{"kind":"Name","value":"author"}},{"kind":"Field","name":{"kind":"Name","value":"source"}}]}}]} as unknown as DocumentNode<ReviewFragment, unknown>;
+export const CategoryItemFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CategoryItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Category"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]} as unknown as DocumentNode<CategoryItemFragment, unknown>;
 export const GetBlogPostsDocument = {"kind":"Document", "definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetBlogPosts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"allPost"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sort"},"value":{"kind":"ListValue","values":[{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"title"},"value":{"kind":"EnumValue","value":"ASC"}}]},{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"publishedAt"},"value":{"kind":"EnumValue","value":"DESC"}}]}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlogPostList"}}]}}]}},...BlogPostListFragmentDoc.definitions]} as unknown as DocumentNode<GetBlogPostsQuery, GetBlogPostsQueryVariables>;
 export const GetBlogPostDocument = {"kind":"Document", "definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetBlogPost"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"allPost"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"current"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlogPost"}}]}}]}},...BlogPostFragmentDoc.definitions]} as unknown as DocumentNode<GetBlogPostQuery, GetBlogPostQueryVariables>;
-export const GetHomePageDataDocument = {"kind":"Document", "definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetHomePageData"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"allProduct"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"HomePageProduct"}}]}}]}},...HomePageProductFragmentDoc.definitions]} as unknown as DocumentNode<GetHomePageDataQuery, GetHomePageDataQueryVariables>;
-export const GetNavDataDocument = {"kind":"Document", "definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetNavData"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"allProduct"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProductNav"}}]}}]}},...ProductNavFragmentDoc.definitions]} as unknown as DocumentNode<GetNavDataQuery, GetNavDataQueryVariables>;
-export const GetPressDocument = {"kind":"Document", "definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetPress"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"allPress"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Press"}}]}}]}},...PressFragmentDoc.definitions]} as unknown as DocumentNode<GetPressQuery, GetPressQueryVariables>;
-export const GetProductDocument = {"kind":"Document", "definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetProduct"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"allProduct"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"current"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Product"}}]}},{"kind":"Field","name":{"kind":"Name","value":"allReview"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"product"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"current"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}}]}}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Review"}}]}}]}},...ProductFragmentDoc.definitions,...ReviewFragmentDoc.definitions]} as unknown as DocumentNode<GetProductQuery, GetProductQueryVariables>;
+export const GetHomePageDataDocument = {"kind":"Document", "definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetHomePageData"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"allPost"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sort"},"value":{"kind":"ListValue","values":[{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"publishedAt"},"value":{"kind":"EnumValue","value":"DESC"}}]}]}},{"kind":"Argument","name":{"kind":"Name","value":"limit"},"value":{"kind":"IntValue","value":"10"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlogPostList"}}]}}]}},...BlogPostListFragmentDoc.definitions]} as unknown as DocumentNode<GetHomePageDataQuery, GetHomePageDataQueryVariables>;
+export const GetNavDataDocument = {"kind":"Document", "definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetNavData"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"allCategory"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CategoryItem"}}]}}]}},...CategoryItemFragmentDoc.definitions]} as unknown as DocumentNode<GetNavDataQuery, GetNavDataQueryVariables>;

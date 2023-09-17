@@ -17,18 +17,19 @@ module.exports = {
       '5xl': '3rem',
       '6xl': '4rem',
     },
-    colors: {
-      darkGreen: '#2B3C2A',
-      activeGreen: '#3C543C',
-      hoverGreen: '#496648',
-      green: '#567855',
-      darkerGreen: '#202c1f',
-      lightGreen: '#D1DAC9',
-      paleGreen: '#EEF1EE',
-      offWhite: '#F5F5F5',
-      white: '#FFFFFF',
-    },
+
     extend: {
+      colors: {
+        darkGreen: '#2B3C2A',
+        activeGreen: '#3C543C',
+        hoverGreen: '#496648',
+        green: '#567855',
+        darkerGreen: '#202c1f',
+        lightGreen: '#D1DAC9',
+        paleGreen: '#EEF1EE',
+        offWhite: '#F5F5F5',
+        white: '#FFFFFF',
+      },
       spacing: {
         xxs: '4px',
         xs: '8px',

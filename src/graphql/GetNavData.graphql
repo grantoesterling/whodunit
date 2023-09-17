@@ -1,17 +1,10 @@
-fragment ProductNav on Product {
-  name
-  slug {
-    current
-  }
-  category {
-    slug {
-      current
-    }
-  }
+fragment CategoryItem on Category {
+  title
+  description
 }
 
 query GetNavData {
-  allProduct {
-    ...ProductNav
+  allCategory {
+    ...CategoryItem
   }
 }
