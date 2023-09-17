@@ -13,7 +13,7 @@ import { BodyText } from '@components/body-text'
 import { formatDate } from '../utils/utils'
 import Link from 'next/link'
 import { SmallHero } from '@components/small-hero'
-const GRAPHQL_ENDPOINT = `https://i13g1hes.api.sanity.io/v2023-08-01/graphql/production/default`
+import { GRAPHQL_ENDPOINT } from 'src/utils/constants'
 
 type BlogPageProps = {
   blogPosts: BlogPostListFragment[]

@@ -1,3 +1,5 @@
+import * as dotenv from "dotenv"
+dotenv.config()
 import Section from '@components/section'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { BlogPostFragment, GetBlogPostDocument } from 'src/generated/graphql'
@@ -18,7 +20,7 @@ type BlogPageProps = {
 }
 const apiVersion = '2023-09-01'
 const dataset = 'production'
-const projectId = 'i13g1hes'
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 
 const SampleImageComponent = ({
   value,

@@ -3,7 +3,7 @@ import type { CodegenConfig } from '@graphql-codegen/cli'
 const config: CodegenConfig = {
   overwrite: true,
   schema:
-    'https://i13g1hes.api.sanity.io/v2023-08-01/graphql/production/default',
+    'https://7g3k9sy8.api.sanity.io/v2023-08-01/graphql/production/default',
   documents: ['./src/**/*.graphql'],
   generates: {
     'src/generated/graphql.ts': {
