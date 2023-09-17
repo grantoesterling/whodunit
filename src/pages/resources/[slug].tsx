@@ -1,4 +1,4 @@
-import * as dotenv from "dotenv"
+import * as dotenv from 'dotenv'
 dotenv.config()
 import Section from '@components/section'
 import { GetStaticPaths, GetStaticProps } from 'next'
@@ -37,7 +37,7 @@ const SampleImageComponent = ({
   })
   const { width, height } = getImageDimensions(value)
   return (
-    <div tw="relative py-md">
+    <div tw="relative py-md justify-center flex">
       <Image
         src={urlBuilder(client)
           .image(value)
@@ -47,7 +47,7 @@ const SampleImageComponent = ({
           .url()}
         alt={value.alt || ' '}
         loading="lazy"
-        width={width}
+        width={400}
         height={height}
         style={{
           // Display alongside text if image appears inside a block text span
