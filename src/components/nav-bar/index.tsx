@@ -5,7 +5,7 @@ import { HamburgerButton, HamburgerMenu } from '@components/hamburger-menu'
 import React from 'react'
 import Image from 'next/image'
 import { CaretIcon } from '@components/icons'
-import { CategoryItemFragment } from '../../generated/graphql';
+import { CategoryItemFragment } from '../../generated/graphql'
 
 const ExpandingMenuItem = ({
   title,
@@ -103,7 +103,7 @@ export const NavBar = ({
       {hamburgerMenuVisible ? (
         <HamburgerMenu
           onHamburgerClick={onHamburgerClick}
-          products={categories}
+          categories={categories}
         />
       ) : null}
       <Section tw="bg-offWhite py-[12px] z-30 absolute top-0 h-[64px] w-full">

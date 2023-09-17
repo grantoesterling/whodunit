@@ -2,7 +2,7 @@ import { Button, ButtonType } from '@components/button'
 import { CaretIcon, HamburgerIcon } from '@components/icons'
 import * as Dialog from '@radix-ui/react-dialog'
 import React from 'react'
-import { ProductNavFragment } from 'src/generated/graphql'
+import { CategoryItemFragment } from 'src/generated/graphql'
 import 'twin.macro'
 type HamburgerButtonProps = {
   onHamburgerClick: () => void
@@ -60,11 +60,11 @@ const ExpandingOptions = ({
 }
 type HamburgerMenuProps = {
   onHamburgerClick: () => void
-  products?: ProductNavFragment[]
+  categories?: CategoryItemFragment[]
 }
 
 export const HamburgerMenu = ({
-  products,
+  categories,
 }: HamburgerMenuProps): React.ReactElement => {
   const hamburgerMenuRef = React.useRef<HTMLDivElement>(null)
 
@@ -78,15 +78,15 @@ export const HamburgerMenu = ({
         ref={hamburgerMenuRef}
       >
         <ExpandingOptions title="OUR PRODUCTS">
-          {products?.map((product) => (
+          {categories?.map((category) => (
             <Button
-              key={product.slug?.current}
+              key={category.title}
               buttonType={ButtonType.unstyled}
               size="md"
-              to={`/product-category/${product.category?.slug?.current}/${product.slug?.current}`}
+              to={`/product-category`}
               tw="justify-center"
             >
-              {product.name}
+              {category.title}
             </Button>
           ))}
         </ExpandingOptions>
